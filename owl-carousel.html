@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owl Carousel Slider</title>
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        .card {
+            border: 1px solid #eee;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            margin: 5px;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+            max-height: 450px;
+        }
+
+        .card-content {
+            padding: 10px;
+            text-align: center;
+        }
+        /* Styling for the Owl Carousel navigation dots */
+        .owl-theme .owl-dots .owl-dot span {
+            background: #ffffff; /* Changing the dot color to white */
+            box-shadow: 0 0 3px rgba(0,0,0,0.3); /* Adding a subtle shadow for depth */
+            border: 1px solid gray;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span {
+            background: #333333; /* Changing the active dot color to dark gray */
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="owl-carousel owl-theme">
+    <div class="card">
+        <img src="https://images.clickfunnels.com/cdn-cgi/image/f=auto,q=80/https://statics.myclickfunnels.com/image/1225844/file/a09cd6c33d53b54fdd73f398d2c53474.png" alt="Image 1">
+        <div class="card-content">
+            <p>This is text for slide 1</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="https://images.clickfunnels.com/cdn-cgi/image/f=auto,q=80/https://statics.myclickfunnels.com/image/1225849/file/a5bf4c106e948044469e42e6850391d9.png" alt="Image 2">
+        <div class="card-content">
+            <p>This is text for slide 2</p>
+        </div>
+    </div>
+    <div class="card">
+      <img src="https://images.clickfunnels.com/cdn-cgi/image/f=auto,q=80/https://statics.myclickfunnels.com/image/1225850/file/37abccafe24ab97cf4798527a3ccd86b.png" alt="Image 3">
+      <div class="card-content">
+          <p>This is text for slide 3</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.clickfunnels.com/cdn-cgi/image/f=auto,q=80/https://statics.myclickfunnels.com/image/1225850/file/37abccafe24ab97cf4798527a3ccd86b.png" alt="Image 4">
+      <div class="card-content">
+          <p>This is text for slide 4</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.clickfunnels.com/cdn-cgi/image/f=auto,q=80/https://statics.myclickfunnels.com/image/1225850/file/37abccafe24ab97cf4798527a3ccd86b.png" alt="Image 5">
+      <div class="card-content">
+          <p>This is text for slide 5</p>
+      </div>
+    </div>
+    <!-- Add more slides as needed -->
+</div>
+
+<!-- jQuery and Owl Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            items: 3, // Default number of items to show on larger screens
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
